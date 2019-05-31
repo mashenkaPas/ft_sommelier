@@ -2,7 +2,6 @@
 
 ##Machine Learning Project
 
-# ft_sommelier
 
  This Dockerfile setup assumes you are going to be using the same physical
  mac for a project. In theory, it should not matter which physical mac you end
