@@ -10,25 +10,37 @@
 
 # Initial Setup Commands (should only be run once, probably!)
 Run these following commands:
+
  1) docker-machine create --driver virtualbox sommelier
 
+
 If docker-machine doesn't run, you'll need to: brew install docker-machine
- Wait for 1) to finish running completely before running 2)!!
+
+Wait for 1) to finish running completely before running 2)!!
+
  2) eval $(docker-machine env sommelier)
 
-`cd` into the whichever directory contains this Dockerfile then run 3)
- If docker doesn't run, you'll need to: brew install docker
+##`cd` into the whichever directory contains this Dockerfile then run 
+3)
+## If docker doesn't run, you'll need to: brew install docker
+
  3) docker build -t ft_sommelier .
+ 
  4) docker volume create notebooks
 
 # Starting up a ft_sommelier container
 
  Remember the 8888/?token=... part that will show up when you run 5)!!
+ 
  5) docker run -it -p 8888:8888 -v notebooks:/notebooks ft_sommelier
-
+ 
+ 
  You can get your <docker-host-ip> with: docker-machine ip sommelier
+ 
  In your browser address:
+ 
  6) <docker-host-ip>:8888/?token=...%
+ 
 
 # What to do if I restart or log out? 
 
