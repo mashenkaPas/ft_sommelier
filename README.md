@@ -1,6 +1,6 @@
-# ft_sommelier
+# Ft_sommelier
 
-##Machine Learning Project
+## Machine Learning Project
 
 
  This Dockerfile setup assumes you are going to be using the same physical
@@ -8,7 +8,7 @@
  up using, but I take no responsibility if you change where you sit, and stuff
  suddenly doesn't work >_>.
 
-# Initial Setup Commands (should only be run once, probably!)
+## Initial Setup Commands (should only be run once, probably!)
 Run these following commands:
 
  1) docker-machine create --driver virtualbox sommelier
@@ -20,15 +20,15 @@ Wait for 1) to finish running completely before running 2)!!
 
  2) eval $(docker-machine env sommelier)
 
-##`cd` into the whichever directory contains this Dockerfile then run 
+### `cd` into the whichever directory contains this Dockerfile then run 
 3)
-## If docker doesn't run, you'll need to: brew install docker
+### If docker doesn't run, you'll need to: brew install docker
 
  3) docker build -t ft_sommelier .
  
  4) docker volume create notebooks
 
-# Starting up a ft_sommelier container
+## Starting up a ft_sommelier container
 
  Remember the 8888/?token=... part that will show up when you run 5)!!
  
@@ -42,7 +42,7 @@ Wait for 1) to finish running completely before running 2)!!
  6) <docker-host-ip>:8888/?token=...%
  
 
-# What to do if I restart or log out? 
+## What to do if I restart or log out? 
 
  If you log out or restart your computer you'll need to restart the
  docker machine when you log back into your mac. Run the following:
@@ -51,7 +51,7 @@ Wait for 1) to finish running completely before running 2)!!
  8) eval $(docker-machine env sommelier)
  Then you can proceed to re-run steps 5) and 6) again
 
-# Finished the project and want to cleanup?
+## Finished the project and want to cleanup?
 
  After you are done with the project it might be a good idea to clean up all
  images and the virtual machine since they take up a LOT of space...
